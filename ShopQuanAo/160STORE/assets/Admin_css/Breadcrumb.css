@@ -1,0 +1,46 @@
+.breadcrumb {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 10px 0; /* Thêm khoảng cách phía dưới */
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #6c757d; /* Màu chữ nhẹ */
+        }
+
+        .breadcrumb-item + .breadcrumb-item::before {
+            content: "/";
+            padding: 0 8px;
+            color: #ccc;
+        }
+
+        .breadcrumb-item a {
+            text-decoration: none;
+            color: #007bff; /* Màu xanh link */
+        }
+
+        .breadcrumb-item.active {
+            color: #343a40; /* Màu chữ đậm hơn cho mục hiện tại */
+            font-weight: 600;
+        }
+
+        /* Điều chỉnh Topbar để chứa Breadcrumb */
+        .topbar {
+            display: flex;
+            flex-direction: column; /* Sắp xếp các thành phần theo chiều dọc */
+            padding-bottom: 10px; /* Thêm padding để không bị dính vào iframe */
+        }
+
+        .topbar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Đảm bảo Breadcrumb hiển thị phía trên Page Title */
+        .breadcrumb-container {
+            order: -1; /* Đẩy breadcrumb lên trên */
+            width: 100%;
+            margin-bottom: 10px;
+        }
